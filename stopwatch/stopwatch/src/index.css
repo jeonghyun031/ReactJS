@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #16213e 100%);
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 40px 60px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.display {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #00f0ff;
+  /* Cyan neon */
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.7),
+    0 0 20px rgba(0, 240, 255, 0.5);
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+}
+
+.controls button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 12px 30px;
+  min-width: 100px;
+  border: none;
+  border-radius: 50px;
+  /* Pill shape */
+  cursor: pointer;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.controls button:active {
+  transform: translateY(0);
+}
+
+.start-button:hover {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(150, 201, 61, 0.5);
+}
+
+.stop-button:hover {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(255, 75, 43, 0.5);
+}
+
+.reset-button:hover {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
