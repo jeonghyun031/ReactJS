@@ -19,7 +19,6 @@ function Stopwatch() {
 
     }, [isRunning]);
 
-
     function start() {
         if (!isRunning) {
             setIsRunning(true);
