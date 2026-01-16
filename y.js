@@ -16,3 +16,21 @@ for (i = 0; i <= n; i++) {
     }
     console.log(row);
 }
+
+//how to code jwt
+app.get("/profil", (req, res) => {
+    const authHeader = req.hearders.authorization;
+    const token = authHeader.split(" ")[1];
+
+    if (!token)
+        //valid token
+        return res.status(401).json({ error: "No token" });
+    try {
+        const user = jwt.verify(token, process.env.JWT_SECRET);
+        res.json({ message: `hello, ${user.userid}` });
+    } catch {
+        //invalid token
+        res.status(403).json({ error: "Invalid token" });
+    }
+});
+//.env file insert token. use HTTPS
